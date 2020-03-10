@@ -1,0 +1,36 @@
+{
+    "name": "game-compile",
+    "version": "2.1.0",
+    "appMinVersion": "0.0.0.0",
+    "appMaxVersion": "255.255.255.255",
+    "description": "",
+    "main": "index.js",
+    "bin": {
+        "swan-game-cli": "./bin/index.js"
+    },
+    "scripts": {
+        "lint": "echo '> 💄 linting...' && node ./tools/fecs-diff.js",
+        "pub": "npm run lint && npm run build && npm publish",
+        "build": "node bin/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "ssh://yupeng07@icode.baidu.com:8235/baidu/hpbfe/swan-game-compilation"
+    },
+    "author": "yupeng07",
+    "license": "UNLICENSED",
+    "dependencies": {
+        "@baidu/swan-game-build": "^0.3.0"
+    },
+    "devDependencies": {
+        "fecs": "^1.6.1",
+        "ghooks": "^2.0.4"
+    },
+    "fecs": {
+        "eslint": {
+            "env": {
+                "es6": true
+            }
+        }
+    }
+}
